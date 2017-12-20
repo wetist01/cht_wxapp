@@ -1,0 +1,77 @@
+<!--tale.wxml-->
+<view class="container more">
+  <view bindtap="editProfile" class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image lazy-load="true" class="userinfo-avatar" src="{{userInfoApi.img_head}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{userInfoApi.user_name}}</text>
+      <text class="edit">点击编辑个人资料</text>
+    </view>
+  </view>
+
+  <view class="my">
+    <view wx:if="{{show == 2}}" bindtap="myTale" class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的发布</text>
+      </view>
+    </view>
+    <view bindtap="myComment" class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的评论</text>
+      </view>
+    </view>
+    <view bindtap="myCollect" class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/star.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的收藏</text>
+      </view>
+    </view>
+    <view bindtap="commentedList" class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>评论我的</text>
+        <view class='msg' hidden='{{commenthide}}'>
+          <text class='i'>{{commentednum}}</text>
+        </view>
+      </view>
+    </view>
+    <view bindtap="likedList" class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>赞我的</text>
+        <view class='msg' hidden='{{likehide}}'>
+          <text class='i'>{{likednum}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <button class='contact' open-type="contact">在线客服</button>
+      </view>
+    </view>
+    <view bindtap='calling' class="my-item flex-wrp">
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/eye.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>联系我们</text>
+      </view>
+    </view>
+  </view>
+</view>

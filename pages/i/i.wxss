@@ -1,0 +1,105 @@
+/* i.wxss */
+
+.user {
+  width: 725rpx;
+  background: #fff;
+  padding: 30rpx 25rpx 30rpx 0;
+  margin: 15rpx 0 0 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px #eee;
+}
+
+.user .userinfo-avatar {
+  flex: 1;
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 80rpx;
+}
+
+.user .user-info {
+  flex: 5;
+  text-align: left;
+}
+
+.user .user-info text {
+  display: block;
+}
+
+.user .user-info .userinfo-nickname {
+  padding: 6rpx 0 10rpx 0;
+  font-size: 30rpx;
+  color: #818a8f;
+}
+
+.user .user-info .edit {
+  font-size: 30rpx;
+  color: #bababa;
+  line-height: 34rpx;
+}
+
+.my {
+  margin: 15rpx 0 0 0;
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 2px #ebebeb;
+}
+
+.my .my-item {
+  width: 750rpx;
+  background: #fff;
+  padding: 0;
+}
+
+.my .my-item .myitem-icon {
+  flex: 1;
+}
+
+.my .my-item .myitem-icon image {
+  width: 45rpx;
+  height: 45rpx;
+  padding: 37.5rpx 0;
+}
+
+.my .my-item .myitem-name {
+  flex: 5;
+  text-align: left;
+  font-size: 34rpx;
+  color: #6d6d6d;
+  line-height: 60rpx;
+  padding: 30rpx 0;
+  border-bottom: solid 1px #ebebeb;
+}
+
+.my .my-item:last-child .myitem-name {
+  border-bottom: none;
+}
+
+.i {
+  display: inline-block;
+  background: #fdd854;
+  border-radius: 50%;
+  color: #fff;
+  width: 1.6em;
+  height: 1.6em;
+  text-align: center;
+  margin: 0 30rpx 0 0;
+}
+
+.msg {
+  display: inline-block;
+  float: right;
+}
+
+.contact {
+  padding-left: 0;
+  text-align: left;
+  font-size: 34rpx;
+  color: #6d6d6d;
+  background-color: #fff;
+  line-height: 1.5555555600000004;
+}
+
+.contact::after {
+  border: 0;
+}

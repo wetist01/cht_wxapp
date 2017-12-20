@@ -1,0 +1,108 @@
+/* comment.wxss */
+
+.container {
+  margin-bottom: 57px;
+}
+
+.container .feed-item .feed-foot view {
+  display: inline-block;
+}
+
+.container .feed-item .feed-foot text {
+  /*position: absolute;*/
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 20rpx 15rpx;
+  color: #a0acac;
+  font-size: 26rpx;
+}
+
+.container .feed-item .feed-source .comment-avatar image {
+  vertical-align: -5px;
+}
+
+.user-name {
+  display: inline-block;
+  width: 86%;
+}
+
+.content-text {
+  margin: 20rpx;
+  color: #000;
+  font-size: 34rpx;
+}
+
+.foot-like {
+  float: right;
+}
+
+.foot-comment {
+  float: right;
+}
+
+.content {
+  margin: 10rpx 10rpx 0 100rpx;
+  width: 83%;
+  font-size: 30rpx;
+}
+
+.add-comment {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 27rpx;
+}
+
+.add-comment input {
+  display: inline-block;
+  width: 76%;
+}
+
+.add-comment button {
+  display: inline-block;
+  float: right;
+  height: 58rpx;
+}
+
+.reply {
+  float: right;
+}
+
+.container .feed-item {
+  margin: 0;
+}
+
+.foot-distance image {
+  width: 51rpx;
+  height: 44rpx;
+}
+
+.foot-like image {
+  width: 45rpx;
+  height: 36rpx;
+}
+
+.foot-comment image {
+  width: 45rpx;
+  height: 36rpx;
+}
+
+.foot-collect image {
+  width: 45rpx;
+  height: 36rpx;
+}
+
+.foot-collect {
+  float: right;
+}
+
+.button {
+  display: inline-block;
+}
+
+.report {
+  float: right;
+}

@@ -1,0 +1,49 @@
+/* tale.wxss */
+
+.container .feed-item .feed-foot view {
+  display: inline-block;
+}
+
+.container .feed-item .feed-foot text {
+  /*position: absolute;*/
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 20rpx 15rpx;
+  color: #a0acac;
+  font-size: 26rpx;
+}
+
+.user_name {
+  display: inline-block;
+}
+
+.content-text {
+  margin: 20rpx;
+  color: #000;
+  font-size: 34rpx;
+}
+
+.foot-like {
+  float: right;
+}
+
+.foot-comment {
+  float: right;
+}
+
+.foot-distance image {
+  width: 51rpx;
+  height: 44rpx;
+}
+
+.foot-like image {
+  width: 45rpx;
+  height: 36rpx;
+}
+
+.foot-comment image {
+  width: 45rpx;
+  height: 36rpx;
+}

@@ -1,0 +1,19 @@
+<!--csm.wxml-->
+<view class="container more">
+  <view class="user flex-wrp">
+    <image lazy-load="true" class="csm-img" src="http://img.chuanhuatong.cc/csm/csm.png"></image>
+  </view>
+
+  <view class="my">
+    <block wx:for="{{list}}">
+      <view bindtap="csminfo" data-csmid="{{item.csm_id}}" data-csmname="{{item.csm_name}}" class="my-item flex-wrp">
+        <view class="myitem-icon flex-item">
+          <image lazy-load="true" class="img" src="{{item.img}}"></image>
+        </view>
+        <view class="myitem-name flex-item">
+          <text>{{item.csm_name}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

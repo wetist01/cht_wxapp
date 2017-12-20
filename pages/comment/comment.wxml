@@ -1,0 +1,70 @@
+<!--comment.wxml-->
+<view class="container">
+  <view class="feed-item">
+    <view class="feed-source">
+      <view class="avatar">
+        <image lazy-load="true" src="{{taleinfo.img_head}}" background-size="cover"></image>
+      </view>
+      <view class="user-name,clearfix">
+        <text>{{taleinfo.user_name}}</text>
+        <text class="user-time">{{taleinfo.latest_reply_time}}</text>
+        <text bindtap='report' class='report'>举报</text>
+      </view>
+    </view>
+    <view class="feed-content">
+      <block wx:if="{{taleinfo.img}}">
+        <view class="content-img">
+          <image lazy-load="true" src="{{taleinfo.img}}" mode="widthFix"></image>
+        </view>
+      </block>
+      <view class="content-text">
+        <text>{{taleinfo.description}}</text>
+      </view>
+    </view>
+    <view class="feed-foot">
+      <view class="foot-distance">
+        <image lazy-load="true" src="../../images/icon/common/location.png"></image>
+        <text>{{taleinfo.distance}}</text>
+      </view>
+      <view bindtap="addlike" class="foot-like">
+        <text>{{likenum}}</text>
+        <image lazy-load="true" src="../../images/icon/common/like.png"></image>
+      </view>
+      <view class="foot-comment">
+        <text>{{taleinfo.comment_num}}</text>
+        <image lazy-load="true" src="../../images/icon/common/comment.png"></image>
+      </view>
+      <view bindtap="addcollect" class="foot-collect">
+        <image lazy-load="true" src="{{collecticon}}"></image>
+      </view>
+    </view>
+  </view>
+  <block wx:for="{{commentinfo}}">
+    <view class="feed-item">
+      <view class="feed-source">
+        <view class="avatar comment-avatar">
+          <image lazy-load="true" src="{{item.img_head}}"></image>
+        </view>
+        <view class="user-name">
+          <text>{{item.user_name}}</text>
+          <text wx:if="{{item.is_anon == 0}}" bindtap="reply" data-commentid="{{item.comment_id}}" data-username="{{item.user_name}}" class="reply">回复</text>
+          <view class="classname">
+            <text>{{item.create_time}}</text>
+            <text>{{item.distance}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="content">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+<form bindsubmit='noticesubmit' report-submit='true'>
+  <view class="add-comment">
+    <input name='comment' bindblur="inputBlur" bindinput="commentInputEvent" name="comment_content" value="{{input_value}}" type="text" confirm-type="send" maxlength="100" placeholder="{{placeholder}}" />
+    <view class="button">
+      <button form-type='submit' type="primary" focus="{{focus}}" size="mini" disabled="{{buttonDisable}}" plain="true" data-taleid="{{tale_id}}">发送</button>
+    </view>
+  </view>
+</form>

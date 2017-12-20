@@ -1,0 +1,43 @@
+<!--tale.wxml-->
+<view class="container">
+  <text wx:if="{{tips}}">附近没有数据哦!</text>
+  <block wx:for="{{list}}">
+    <view class="feed-item" bindtap="taleinfo" data-taleid="{{item.tale_id}}" data-uid="{{item.uid}}">
+      <view class="feed-source ">
+        <a>
+          <view class="avatar ">
+            <image lazy-load="true" src="{{item.img_head}} " background-size="cover"></image>
+          </view>
+          <view class="user_name,clearfix ">
+            <text>{{item.user_name}}</text>
+            <text class="user_time ">{{item.latest_reply_time}}</text>
+          </view>
+        </a>
+      </view>
+      <view class="feed-content ">
+        <block wx:if="{{item.img}}">
+          <view class="content-img ">
+            <image lazy-load="true" src="{{item.img}} " mode="widthFix"></image>
+          </view>
+        </block>
+        <view class="content-text ">
+          <text>{{item.description}}</text>
+        </view>
+      </view>
+      <view class="feed-foot ">
+        <view class="foot-distance ">
+          <image lazy-load="true" src="../../images/icon/common/location.png"></image>
+          <text>{{item.distance}}</text>
+        </view>
+        <view class="foot-like ">
+          <text>{{item.like_num}}</text>
+          <image lazy-load="true" src="../../images/icon/common/like.png"></image>
+        </view>
+        <view class="foot-comment ">
+          <text>{{item.comment_num}}</text>
+          <image lazy-load="true" src="../../images/icon/common/comment.png"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

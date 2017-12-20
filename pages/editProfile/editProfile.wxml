@@ -1,0 +1,11 @@
+<!--pages/editProfile/editProfile.wxml-->
+<view class="container">
+  <view class="my">
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <input maxlength='12' bindinput='usernameinput' placeholder='在此输入用户名(更新后显示存在一定延迟)'></input>
+      </view>
+    </view>
+  </view>
+  <button loading='{{loading}}' disabled='{{disabled}}' bindtap='button' class='button' type='primary'>确认</button>
+</view>

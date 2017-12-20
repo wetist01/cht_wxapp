@@ -1,0 +1,16 @@
+<!--table.wxml-->
+<view class="container more">
+  <text wx:if="{{tips}}">{{tips}}</text>
+  <block wx:for="{{list}}">
+    <view bindtap="detail" data-taleid="{{item.tale_id}}" data-uid="{{item.uid}}" class="user flex-wrp">
+      <view class="avatar flex-item">
+        <image lazy-load="true" class="userinfo-avatar" src="{{item.img_head}}" background-size="cover"></image>
+      </view>
+      <view class="user-info flex-item">
+        <text class="userinfo-nickname">{{item.user_name}}</text>
+        <text class="content">{{item.content}}</text>
+        <text class="edit">{{item.create_time}}</text>
+      </view>
+    </view>
+  </block>
+</view>

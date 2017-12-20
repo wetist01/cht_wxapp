@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/tale/tale",
+    "pages/new/new",
+    "pages/csm/csm",
+    "pages/comment/comment",
+    "pages/i/i",
+    "pages/taleother/taleother",
+    "pages/table/table",
+    "pages/edit/edit",
+    "pages/editProfile/editProfile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fdd854",
+    "navigationBarTitleText": "传话筒",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fdd854",
+    "list": [
+      {
+        "pagePath": "pages/tale/tale",
+        "text": "首页",
+        "iconPath": "images/icon/bar/index.png",
+        "selectedIconPath": "images/icon/bar/index.png"
+      },
+      {
+        "pagePath": "pages/csm/csm",
+        "text": "传送门",
+        "iconPath": "images/icon/bar/csm.png",
+        "selectedIconPath": "images/icon/bar/csm.png"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "text": "biu",
+        "iconPath": "images/icon/bar/new.png",
+        "selectedIconPath": "images/icon/bar/new.png"
+      },
+      {
+        "pagePath": "pages/i/i",
+        "text": "我的",
+        "iconPath": "images/icon/bar/i.png",
+        "selectedIconPath": "images/icon/bar/i.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "debug": false
+}

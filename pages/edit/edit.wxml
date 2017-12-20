@@ -1,0 +1,25 @@
+<!--pages/edit/edit.wxml-->
+<view class="container">
+  <view class="my">
+    <view bindtap="changeAvatar" class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text>头像</text>
+      </view>
+      <view class="avatar flex-item">
+        <image lazy-load="true" class="userinfo-avatar" src="{{img_head}}" background-size="cover"></image>
+      </view>
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/common/you.png"></image>
+      </view>
+    </view>
+    <view bindtap="changeUserName" class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text>用户名</text>
+        <text style='float:right;'>{{user_name}}</text>
+      </view>
+      <view class="myitem-icon flex-item">
+        <image lazy-load="true" src="../../images/icon/common/you.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

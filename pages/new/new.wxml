@@ -1,0 +1,35 @@
+<!--new.wxml-->
+<block wx:if="{{show ==1}}">
+  <view style='padding:35rpx;font-size:34rpx;' class='gonggao'>
+    <text>{{gonggao}}</text>
+  </view>
+</block>
+
+<block wx:if="{{show == 2}}">
+  <view class="containers">
+    <view class="head">
+      <textarea value="{{input_value}}" bindinput="textinput" placeholder="发点啥呢......" />
+    </view>
+    <view hidden="{{hidden}}" class="img">
+      <image lazy-load="true" src="{{img}}"></image>
+    </view>
+    <view class="anon">
+      <text>是否匿名</text>
+      <switch checked="{{checked}}" bindchange="switchChange" />
+    </view>
+    <view hidden="{{addhidden}}" class="addimg button">
+      <button bindtap="addimg">添加图片</button>
+    </view>
+    <view hidden="{{subtracthidden}}" class="substractimg button">
+      <button type="warn" bindtap="subtractimg">删除图片</button>
+    </view>
+    <form bindsubmit='newform' report-submit='true'>
+      <view class="submit">
+        <button form-type='submit' loading='{{loading}}' type="primary" disabled="{{disabled}}" class="button">点击发布</button>
+      </view>
+    </form>
+    <view class="tips">
+      <text>提示：可以只发文字哦！</text>
+    </view>
+  </view>
+</block>
